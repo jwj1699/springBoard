@@ -1,17 +1,25 @@
 package com.spring.board_pjt_controller;
 
 import com.spring.board_pjt_command.*;
-import org.springframework.stereotype.Controller;
+import com.spring.board_pjt_util.Constant;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import javax.servlet.http.HttpServletRequest;
 
-@Controller
 public class BController {
 
+    public JdbcTemplate jdbcTemplate;
     BCommend commend;
+
+    @Autowired
+    public void setJdbcTemplate(JdbcTemplate jdbcTemplate) {
+        this.jdbcTemplate = jdbcTemplate;
+        Constant.jdbcTemplate = jdbcTemplate;
+    }
 
     @RequestMapping("/list")
     public String list(Model model){
