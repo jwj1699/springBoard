@@ -1,4 +1,4 @@
-﻿# 스프링 게시판
+﻿# 스프링 게시판 (stop)
 
 ###개발환경
 
@@ -15,3 +15,4 @@ https://trello.com/b/V7VAOPnU/sprinbboard
 ###구현단계
 + basic게시판 구현 (글쓰기, 수정, 삭제, 답글달기)
 + JdbcTemplete적용
++ 임시중단
